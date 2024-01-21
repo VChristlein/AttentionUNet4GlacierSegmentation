@@ -1,4 +1,29 @@
+# Glacier Calving Front Segmentation Using Attention U-Net
+
+Code by Michael Holzmann. All credits to him.
+
+## Abstract
+An essential climate variable to determine the tidewater glacier status is the location of the calving front position and the separation of seasonal variability from long-term trends. Previous studies have proposed deep learning-based methods to semi-automatically delineate the calving fronts of tidewater glaciers. They used U-Net to segment the ice and non-ice regions and extracted the calving fronts in a post-processing step. In this work, we show a method to segment the glacier calving fronts from SAR images in an end-to-end fashion using Attention U-Net. The main objective is to investigate the attention mechanism in this application. Adding attention modules to the state-of-the-art U - N et network lets us analyze the learning process by extracting its attention maps. We use these maps as a tool to search for proper hyperparameters and loss functions in order to generate higher qualitative results. Our proposed attention U-Net performs comparably to the standard U-Net while providing additional insight into those regions on which the network learned to focus more. In the best case, the attention U-Net achieves a 1.5 % better Dice score compared to the canonical U-Net with a glacier front line prediction certainty of up to 237.12 meters.
+
+## Cite
+If you find this codebase useful, please cite:
+```
+@INPROCEEDINGS{9555067,
+  author={Holzmann, Michael and Davari, Amirabbas and Seehaus, Thorsten and Braun, Matthias and Maier, Andreas and Christlein, Vincent},
+  booktitle={2021 IEEE International Geoscience and Remote Sensing Symposium IGARSS}, 
+  title={Glacier Calving Front Segmentation Using Attention U-Net}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={3483-3486},
+  keywords={},
+  doi={10.1109/IGARSS47720.2021.9555067},
+  ISSN={2153-7003},
+  month={July},}
+```
+
 S0_data_info.py (Datagen):
+
 	@params:
 		--patch_size [int] (spatial dimemension of a patch)
 		--outpath [str] (output folder of the data)
